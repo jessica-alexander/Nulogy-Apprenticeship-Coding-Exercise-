@@ -36,11 +36,26 @@ class Estimate
     end
   end
 
+  def estimate
+
+   @estimate = flat_rate + @labour + @material
+
+   return @estimate.round(2)
+  end
+
 end
 
 company1 = Estimate.new(1299.99)
 
 company1.flat_rate
 company1.labour(3)
-company1.material('pharmaceuticals')
 company1.material('food')
+company1.estimate
+
+company2 = Estimate.new(5432.00)
+company2.labour(1)
+company2.material('pharmaceuticals')
+company2.estimate
+
+company3 = Estimate.new(12456.95)
+company3.labour(4)
