@@ -33,6 +33,9 @@ class Estimate
     elsif type_of_material == 'electronics'
       @material = flat_rate * 0.02
 
+    else type_of_material == nil
+      @material = 0
+
     end
   end
 
@@ -59,3 +62,5 @@ company2.estimate
 
 company3 = Estimate.new(12456.95)
 company3.labour(4)
+company3.material('books')
+company3.estimate
