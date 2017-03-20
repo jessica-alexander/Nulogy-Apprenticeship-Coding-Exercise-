@@ -1,4 +1,4 @@
-class Nupack
+class Estimate
 
   attr_reader :base, :labour, :material, :estimate
 
