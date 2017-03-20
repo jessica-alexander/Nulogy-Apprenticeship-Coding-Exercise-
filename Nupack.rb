@@ -9,3 +9,4 @@ class Estimate
     @estimate = 0
 
   end
+end
