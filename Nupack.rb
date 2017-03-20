@@ -9,4 +9,14 @@ class Estimate
     @estimate = 0
 
   end
+
+  def flat_rate
+
+    return @base * 1.05
+
+  end
 end
+
+company1 = Estimate.new(1299.99)
+
+company1.flat_rate
