@@ -1,4 +1,11 @@
-class Estimate
+gem 'activerecord', '=4.2.7'
+require 'active_record'
+require 'mini_record'
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'nupack.sqlite3')
+
+
+class Estimate < ActiveRecord::Base
 
   attr_reader :base, :labour, :material, :estimate
 
