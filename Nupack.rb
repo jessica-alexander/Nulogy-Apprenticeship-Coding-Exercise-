@@ -1,13 +1,17 @@
-gem 'activerecord', '=4.2.7'
-require 'active_record'
-require 'mini_record'
+# gem 'activerecord', '=4.2.7'
+# require 'active_record'
+# require 'mini_record'
+#
+# ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'nupack.sqlite3')
 
-ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'nupack.sqlite3')
 
+# class Estimate < ActiveRecord::Base
 
-class Estimate < ActiveRecord::Base
+class Estimate
 
-  attr_reader :base, :labour, :material, :estimate
+  attr_reader :id
+
+  attr_accessor :base, :labour, :material, :estimate
 
   def initialize(base)
     @base = base
